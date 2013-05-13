@@ -1,0 +1,41 @@
+<h1>New Contractor</h1>
+
+
+<%= form_tag(contractors_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :business %><br />
+    <%= text_field_tag :business %>
+  </div>
+
+    <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
+  </div>
+
+    <div>
+    <%= label_tag :type %><br />
+    <%= text_field_tag :type %>
+  </div>
+
+    <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email %>
+  </div>
+
+    <div>
+    <%= label_tag :phone %><br />
+    <%= text_field_tag :phone %>
+  </div>
+
+    <div>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Create Contractor" %>
+  </div>
+<% end %>

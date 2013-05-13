@@ -1,0 +1,46 @@
+<h1>Projects</h1>
+
+
+<table class="table table-bordered table-striped table-hover">
+
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Responsible</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Due date</th>
+      <th>Reminder</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @projects.each do |project| %>
+    <tr>
+      <td><%= project.description %></td>
+      <td><%= project.responsible %></td>
+      <td><%= project.priority %></td>
+      <td><%= project.status %></td>
+      <td><%= project.due_date %></td>
+      <td><%= project.reminder %></td>
+
+      <td><%= link_to 'Show', project_url(project) %></td>
+      <td><%= link_to 'Edit', edit_project_url(project) %></td>
+      <td><%= link_to 'Destroy', project_url(project), method: 'delete', data: { confirm: "Do you really want to delete this project?" } %></td>
+
+    </tr>
+
+  <% end %>
+  </tbody>
+</table>
+    <p><%= link_to 'Add a New Project', new_project_url %></p>
+
+ <div>
+
+  <td><a class="btn btn-inverse" href="/projects/new">New Project</a></td>
+
+  </div>
+

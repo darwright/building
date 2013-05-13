@@ -1,0 +1,41 @@
+<h1>Editing Project #<%= @project.id %></h1>
+
+
+<%= form_tag(project_url(@project), method: 'put') do %>
+
+  <div>
+    <%= label_tag :description %>
+    <%= text_area_tag :description, @project.description %>
+  </div>
+<br />
+  <div>
+    <%= label_tag :responsible %>
+    <%= text_field_tag :responsible, @project.responsible %>
+  </div>
+<br />
+  <div>
+    <%= label_tag :priority %>
+    <%= text_field_tag :priority, @project.priority %>
+  </div>
+<br />
+  <div>
+    <%= label_tag :status %>
+    <%= text_field_tag :status, @project.status %>
+  </div>
+<br />
+  <div>
+    <%= label_tag :due_date %>
+    <%= text_field_tag :due_date, @project.due_date %>
+  </div>
+<br />
+  <div>
+    <%= label_tag :reminder %>
+    <%= text_field_tag :reminder, @project.reminder %>
+  </div>
+<br />
+
+  <div>
+    <%= submit_tag "Update Project" %>
+  </div>
+
+<% end %>
